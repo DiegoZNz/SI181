@@ -1,4 +1,7 @@
 from random import choice
+import matplotlib.pyplot as plt #para instalar es; pip install matplotlib
+from sklearn.neural_network import MLPClassifier #para instalar es: pip install scikit-learn
+
 
 options = ["piedra", "tijeras", "papel"]
 
@@ -69,8 +72,6 @@ data_y = list(map(str_to_list, ["pLapel", "piedra", "tijeras"]))
 print(data_X)
 print(data_y)
 
-from sklearn.neural_network import MLPClassifier
-
 clf = MLPClassifier(verbose=False, warm_start=True)
 
 model = clf.fit([data_X[0]], [data_y[0]])
@@ -130,8 +131,6 @@ while True:
     if sum(historic_pct[-9:]) == 900:
         break
     
-import matplotlib.pyplot as plt
-
 x = list(range(len(historic_pct)))
 y = historic_pct
 
