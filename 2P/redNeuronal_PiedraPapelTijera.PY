@@ -5,7 +5,7 @@ from sklearn.neural_network import MLPClassifier #para instalar es: pip install 
 
 options = ["piedra", "tijeras", "papel"]
 
-#Generamos una funci[on con todas las combinaciones posibles
+#Generamos una función con todas las combinaciones posibles
 def search_winner(player1, player2):
     if player1 == player2:
         result = 0
@@ -67,7 +67,7 @@ def str_to_list(option):
     return res
 
 data_X = list(map(str_to_list, ["piedra", "tijeras", "papel"]))
-data_y = list(map(str_to_list, ["pLapel", "piedra", "tijeras"]))
+data_y = list(map(str_to_list, ["papel", "piedra", "tijeras"]))
 
 print(data_X)
 print(data_y)
