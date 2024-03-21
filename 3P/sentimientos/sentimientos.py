@@ -1,23 +1,9 @@
-#Primera versión del programa sin algunas lineas, motivo desconocido
-
 import re
 import pandas as pd
 from deep_translator import GoogleTranslator
 import nltk
 from textblob import TextBlob
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-
-"""
-import ssl
-
-try:
-    _create_unverified_https_context = ssl._create_unverified_context
-except AttributeError:
-    pass
-else:
-    ssl._create_default_https_context = _create_unverified_https_context
-"""
-
 #nltk.download()
 from nltk.tokenize import word_tokenize
 from nltk import pos_tag
@@ -98,9 +84,9 @@ mydata.head()
 print(mydata[['review', 'Lemma']])
 
 
-#Paso 4: Utilizar los algoritmos de análisis de sentimientos (textblob, vader, etc)///////////////////////////////////////////////////////////////////////////////////////////
+#Paso 4: Utilizar los algoritmos de análisis de sentimientos (textblob, vader, etc)
 
-#Primer libreria textblob//////////////////////////////////////////////////////////////////////////////////////////////////
+#Primer libreria textblob
 
 #Esto nos calculara la polaridad, esta varia de -1 a 1 (1 mas positivo, 0 es neutral, -1 mas negativo)
 #La subjetividad (Efectividad), esta varia de 0 a 1 (0 es objetivo y 1 muy subjetivo)
@@ -136,7 +122,7 @@ plt.figure(figsize=(10,7))
 plt.title("Resultado TextBlob")
 plt.pie(tb_counts.values,labels=tb_counts.index,explode=(0.1,0,0),autopct='%1.1f%%',shadow=False)
 plt.show()
-#Segunda libreria VADER //////////////////////////////////////////////////////////////////////////////////////////////////
+#Segunda libreria VADER
 
 #Algoritmo de Sentimiento con Vader (Valance Aware Dictionary and Sentiment Reasoner)
 
@@ -177,10 +163,8 @@ plt.title("Resultado Vader_Analysis")
 plt.pie(vader_counts.values,labels=vader_counts.index,explode=(0.1,0,0),autopct='%1.1f%%',shadow=False)
 plt.show()
 
-#Tercer libreria: SentiWordNet //////////////////////////////////////////////////////////////////////////////////////////////////
-
+#Tercer libreria: SentiWordNet 
 #Para esta libreria es importante obtner el POS, Lemma de cada palabra
-
 #Si la puntuacion positiva > puntuacion negativa, el sentimiento es positivo
 #Si la puntuacion negativa > puntuacion positiva, el sentimiento es negativo
 #Si la puntuacion positiva = puntuacion negativa, el sentimiento es neutral
