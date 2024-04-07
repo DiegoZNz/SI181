@@ -1,0 +1,41 @@
+{
+    "intents":[
+        {
+            "tag": "Saludo",
+            "patterns": ["Hola", "¿Cómo estás?", "¿Qué tal?", "Buenos días", "Buenas tardes", "Buenas noches"],
+            "responses": ["Hola", "¡Hola!", "Hola, ¿en qué puedo ayudarte?", "Hola, ¿cómo estás?"
+        ],
+        "context":[
+            ""
+        ]
+            
+    },
+    {
+        "tag": "Adios",
+        "patterns": ["Adiós", "Hasta luego", "Hasta pronto", "Nos vemos", "Chao", "Hasta la próxima"],
+        "responses": ["Adios, ten un buen día"
+        ],
+        "context":[
+            ""
+        ]
+    },
+    {
+        "tag": "Gracias",
+        "patterns": ["Gracias", "Muchas gracias", "Gracias por tu ayuda", "Gracias por todo", "Te agradezco"],
+        "responses": ["Feliz de haberte ayudado"
+        ],
+        "context":[
+            ""
+        ]
+    },
+    {
+        "tag": "norespuesta",
+        "patterns": [],
+        "responses": ["Perdón, no puedo entenderte"
+        ],
+        "context":[
+            ""
+        ]
+    }
+    ]
+}
